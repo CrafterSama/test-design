@@ -20,9 +20,15 @@ body {
 	transform-style: preserve-3d;
 }
 
-div.full, div.half {
-	margin-top: 5px;
-	margin-bottom: 5px;
+input, textarea {
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5em;
+    border-radius: 3px;
+    color: #333;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -52,60 +58,25 @@ img.logo-image {
 	max-width: 120px;
 }
 
-textarea {
-	width: 100%;
-}
-
 ul {  
 	list-style-type:none;  
 } 
+
+#back-top {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 25px;
+	z-index: 1000;
+	padding: 7px;
+	border-radius: 3px;
+	background-color: #ffffff;
+}
 
 .awesome-text {
 	font-size: 1.3em;
 	font-weight: 700;
 	text-decoration: underline;
-}
-
-#back-top {
-    position: fixed;
-    bottom: 30px;
-    margin-left: -150px;
-}
-
-#back-top a {
-    width: 108px;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #bbb;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
-}
-
-#back-top a:hover {
-    color: #000;
-}
-
-#back-top span {
-    width: 108px;
-    height: 108px;
-    display: block;
-    margin-bottom: 7px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
-}
-
-#back-top a:hover span {
-    background-color: #777;
 }
 
 .call-to-action {
@@ -225,6 +196,7 @@ ul {
     padding: 20px 0;
     color: #fff;
     font-size: 18px;
+    width: 100%;
 }
 
 .footer a {
@@ -232,16 +204,24 @@ ul {
 	border-bottom: 1px dotted #fff;
 }
 
-.full {
-	width: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
+.box {
+  padding: 0;
+  margin: 0;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: stretch;
 }
 
-.half {
-	width: 49.5%;
-	padding-left: 15px;
-	padding-right: 15px;
+.items {
+	flex: 2 auto;
+	min-width: 320px;
+	max-width: 1280px;
 }
 
 .header-navbar {
@@ -269,6 +249,10 @@ ul {
 .logo-image-side {
 	width: 25%;
 	float: left;
+}
+
+.navbar {
+	width: 100%;
 }
 
 .navbar-fixed-top {
@@ -336,5 +320,4 @@ ul {
 }
 
 .wrapper {
-
 }
