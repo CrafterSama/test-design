@@ -20,12 +20,14 @@ a.call-to-action, a.mini-call-to-action {
 	border-radius: 7px;
 	border: 1px solid #0D9A99;
 	color: #fff;
+	display: block;
 	font-size: 2em;
 	font-weight: 700;
-	margin: 50px 25px;
+	margin: 50px auto 0 auto;
 	padding: 18px 36px;
 	text-shadow: 0 1px 1px #333;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+	max-width: 300px;
 }
 
 a.call-to-action:hover, a.mini-call-to-action:hover {
@@ -36,15 +38,14 @@ a.call-to-action:hover, a.mini-call-to-action:hover {
 }
 
 a.mini-call-to-action {
-	font-size: 1.5em;
-	margin: 30px 0;
-	padding: 5px 10px;
+    font-size: 1.5em;
+    margin: 30px auto 0 auto;
+    padding: 5px 10px;
 }
 
 body {
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
-	height: 100%;
 	padding:0;
 }
 
@@ -134,9 +135,11 @@ ul {
 	padding: 15px;
 	margin: 0;
 
+	display: -o-box;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
+	display: -o-flex;
 	display: -webkit-flex;
 	display: flex;
 
@@ -149,7 +152,7 @@ ul {
 }*/
 
 .center {
-	margin: 50px auto 50px auto;
+	margin: 0 auto;
     text-align: center;
 }
 
@@ -176,11 +179,8 @@ ul {
 .contacts {
 	background-color: #ccc;
 	color: white;
-	display: table;
-	height: 500px;
 	position: relative;
 	text-align: center;
-	width: 100%;
 	color: #333;
 }
 
@@ -190,11 +190,13 @@ ul {
 
 .dark-overlay {
 	background-color: rgba(0, 0, 0, 0.4);
-	display: table;
 	height: 100%;
 	position: relative;
 	text-align: center;
 	width: 100%;
+	z-index: 1;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .fa-check {
@@ -212,17 +214,13 @@ ul {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
-	display: table;
-	height: 1000px;
 	position: relative;
 	text-align: center;
-	width: 100%;
 }
 
 .features-body {
     text-align: justify;
     background-color: rgba(255, 255, 255, 0.8);
-    margin: 100px 0 50px 0;
     padding: 2.5%;
     border-radius: 7px;
     color: #333;
@@ -268,7 +266,6 @@ ul {
     padding: 20px 0;
     color: #fff;
     font-size: 18px;
-    width: 100%;
 }
 
 .footer a {
@@ -280,24 +277,20 @@ ul {
 	flex: 1 auto;
 	margin: 5px;
 	padding: 15px;
-	min-width: 320px;
-	max-width: 1280px;
 }
 
 .item-2 {
 	flex: 2 auto;
 	margin: 5px;
 	padding: 15px;
-	min-width: 320px;
-	max-width: 640px;
 }
 
 .item-3 {
-	flex: 3 auto;
-	margin: 5px;
-	padding: 15px;
-	padding: 15px;
-	width: 320px;
+    flex: 3 auto;
+    margin: 5px auto;
+    padding: 15px;
+    min-width: 300px;
+    max-width: 360px;
 }
 
 .header-navbar {
@@ -305,9 +298,16 @@ ul {
 }
 
 .inner-content {
-	margin: 0 auto;
-	min-width: 320px;
-	max-width: 1280px;
+    margin: 0 auto;
+    padding: 5% 0;
+    max-width: 1280px;
+    min-width: 300px;
+}
+
+.inner-navbar {
+    margin: 0 auto;
+    max-width: 1280px;
+    min-width: 300px;
 }
 
 .links {
@@ -316,8 +316,7 @@ ul {
 }
 
 .links-side {
-	width: 72%;
-	float: left;
+	float: right;
 	padding: 15px;
 	text-align: right;
 }
@@ -328,19 +327,18 @@ ul {
 }
 
 .navbar {
-	width: 100%;
 }
 
 .navbar-fixed-top {
-	background-color: rgba(255, 255, 255, 0.95);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 9999;
-	width: 100%;
-	height: 50px;
-	box-shadow: 1px 1px 1px #333;
-	padding: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 50px;
+    box-shadow: 1px 1px 1px #333;
+    padding: 15px;
+    width: 100%;
 }
 
 .navbar-links {
@@ -362,21 +360,14 @@ ul {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #fff;
-	display: table;
-	height: 450px;
 	position: relative;
 	text-align: center;
-	width: 100%;
 }
 
 .overview-items {
-    margin: 100px 0;
-    text-align: justify;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 3.5%;
     border-radius: 7px;
     color: #333;
-    width: 100%;
 }
 
 .presentation {
@@ -389,15 +380,12 @@ ul {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #fff;
-	display: table;
-	height: 1000px;
 	position: relative;
 	text-align: center;
-	width: 100%;
 }
 
 .presentation-body {
-	padding: 20% 25px 10% 25px;
+    padding: 5% 25px;
 }
 
 .presentation-text {
@@ -406,12 +394,21 @@ ul {
 
 .white-overlay {
 	background-color: rgba(255, 255, 255, 0.4);
-	display: table;
 	height: 100%;
 	position: relative;
 	text-align: center;
-	width: 100%;	
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;	
 }
 
 .wrapper {
+}
+
+@media (max-width: 1025px) {
+
+	.dark-overlay, .inner-content, .white-overlay {
+		padding: 0 0 10px 0;
+	}	
+
 }
